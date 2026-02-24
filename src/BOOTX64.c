@@ -142,8 +142,7 @@ EFI_STATUS EFIAPI efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable
             }
 
             if (gShouldPrintMessage) {
-                Print(L"This is my world without you, bro. Empty. T-T\n");
-                Print(L"Stay with me or you will not see me again forever.\n");
+                Print(L"This drive has been successfully wiped!\n");
                 gShouldPrintMessage = FALSE;
             }
         }
@@ -160,8 +159,6 @@ EFI_STATUS EFIAPI efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable
     gWipeComplete = TRUE;
 
     for (;;) {
-        Print(L"This is my world without you, bro. Empty. T-T\n");
-        Print(L"Stay with me or you will not see me again forever.\n");
         BS->Stall(500000);
     }
 
